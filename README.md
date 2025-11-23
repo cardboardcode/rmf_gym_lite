@@ -24,5 +24,7 @@ bash scripts/1_run_triple_h_scenario.bash
 
 [![Watch the video](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.png)](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.webm)
 
+[![Watch the video](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_deconfliction.png)](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_deconfliction.webm)
+
 ## **Maintainer(s)**
 - [cardboardcode](https://github.com/cardboardcode)
