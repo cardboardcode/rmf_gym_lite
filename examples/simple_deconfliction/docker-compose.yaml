@@ -1,0 +1,69 @@
+services:
+   rmf_web_dashboard_demo:
+     container_name: rmf_web_dashboard_demo_c
+     image: ghcr.io/cardboardcode/rmf_dashboard:jazzy
+     environment:
+      RMF_SERVER_URL: http://localhost:8000
+      TRAJECTORY_SERVER_URL: http://localhost:8006
+     network_mode: "host"
+   rmf_web_rmf_server_demo:
+     container_name: rmf_web_rmf_server_demo_c
+     image: ghcr.io/cardboardcode/rmf_api_server:jazzy
+     environment:
+      RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+     network_mode: "host"
+   rmf_core:
+     container_name: rmf_core_c
+     image: ghcr.io/cardboardcode/rmf_core:jazzy
+     volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./:/rmf_core_ws/map/simple_deconfliction
+      - ./debug.rviz:/rmf_core_ws/install/rmf_core/rviz/debug.rviz
+     environment:
+      XDG_RUNTIME_DIR: $XDG_RUNTIME_DIR
+      RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+      DISPLAY: $DISPLAY
+     devices:
+      - "/dev/dri:/dev/dri"
+     network_mode: "host"
+     command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/simple_deconfliction/simple_deconfliction.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/simple_deconfliction/simple_deconfliction.building.yaml"
+     healthcheck: 
+      test: "bash /rmf_core_ws/check_health.bash"
+      interval: 30s
+      timeout: 1m
+      retries: 2
+   fleet_adapter_invisibot_a:
+     container_name: fleet_adapter_invisibot_a_c
+     image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy
+     volumes:
+      - ./0_config.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
+      - ./0.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
+     environment:
+       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+     network_mode: "host"
+     command: bash -c "ros2 run fleet_adapter_invisibot fleet_adapter -c /fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml -n /fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml -s ws://localhost:8000/_internal"
+     depends_on:
+      rmf_core:
+        condition: service_healthy
+     restart: unless-stopped
+   fleet_adapter_invisibot_b:
+     container_name: fleet_adapter_invisibot_b_c
+     image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy
+     volumes:
+      - ./1_config.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
+      - ./0.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
+     environment:
+       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+     network_mode: "host"
+     command: bash -c "ros2 run fleet_adapter_invisibot fleet_adapter -c /fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml -n /fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml -s ws://localhost:8000/_internal"
+     depends_on:
+      rmf_core:
+        condition: service_healthy
+     restart: unless-stopped
+   invisibot:
+     container_name: invisibot_c
+     image: ghcr.io/cardboardcode/invisibot:latest
+     volumes:
+       - ./robots.json:/invisibot_ws/robots.json
+     network_mode: "host"
+     command: bash -c "python3 -m invisibot"

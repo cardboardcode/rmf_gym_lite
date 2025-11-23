@@ -1,0 +1,19 @@
+building_name: building
+doors: {}
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {}
+    - - 1
+      - 0
+      - {}
+    vertices:
+    - - 24.139981495079617
+      - -6.808200939020998
+      - {is_charger: true, name: 1_b}
+    - - 3.434226746007568
+      - -6.808200939020998
+      - {name: 1_a}
+lifts: {}
