@@ -23,14 +23,10 @@ bash scripts/1_run_triple_h_scenario.bash
 ## **Verify**
 
 ### **triple_H**
-<video src="https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.mp4" controls width="480">
-  Your browser does not support playing this video.
-</video>
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.png)
 
 ### **simple_deconfliction**
-<video src="https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_deconfliction.mp4" controls width="480">
-  Your browser does not support playing this video.
-</video>
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_deconfliction.png)
 
 ## **Maintainer(s)**
 - [cardboardcode](https://github.com/cardboardcode)
