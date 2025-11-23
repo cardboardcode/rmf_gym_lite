@@ -7,7 +7,7 @@ These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tr
 ## **Build**
 
 ```bash
-
+docker compose -f examples/simple_lift/docker-compose.yaml build
 ```
 
 ## **Run**
