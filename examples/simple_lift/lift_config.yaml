@@ -1,0 +1,7 @@
+base_url: "http://127.0.0.1:8888"
+user: "username" # Unused for lift_adapter_mock
+password: "password" # Unused for lift_adapter_mock
+
+lifts:
+  - name: "Lift1"
+    available_floors: ["L1","L3"]
