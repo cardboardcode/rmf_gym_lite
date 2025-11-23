@@ -7,13 +7,17 @@ These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tr
 ## **Build**
 
 ```bash
+git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-branch main
+```
+
+```bash
 docker compose -f examples/simple_lift/docker-compose.yaml build
 ```
 
 ## **Run**
 
 ```bash
-
+bash scripts/1_run_triple_h_scenario.bash
 ```
 
 ## **Verify**
