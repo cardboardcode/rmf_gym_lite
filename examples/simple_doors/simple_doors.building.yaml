@@ -1,0 +1,62 @@
+coordinate_system: reference_image
+crowd_sim:
+  agent_groups:
+    - {agents_name: [], agents_number: 0, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+  agent_profiles:
+    - {ORCA_tau: 1, ORCA_tauObst: 0.40000000000000002, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+  enable: 0
+  goal_sets: []
+  model_types: []
+  obstacle_set: {class: 1, file_name: L1_navmesh.nav, type: nav_mesh}
+  states:
+    - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
+  transitions: []
+  update_time_step: 0.10000000000000001
+graphs:
+  {}
+levels:
+  L1:
+    doors:
+      - [12, 13, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, 1], name: [1, door1], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_sliding]}]
+      - [14, 15, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, 1], name: [1, door2], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_sliding]}]
+    drawing:
+      filename: simple_doors.jpeg
+    elevation: 0
+    floors:
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [7, 4, 5, 6]
+    lanes:
+      - [8, 10, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [10, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [11, 16, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [16, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
+    layers:
+      {}
+    measurements:
+      - [1, 0, {distance: [3, 9.3149999999999995]}]
+      - [2, 3, {distance: [3, 20.088999999999999]}]
+    vertices:
+      - [42.390000000000001, 1030.0840000000001, 0, ""]
+      - [39.481000000000002, 38.206000000000003, 0, ""]
+      - [225.63999999999999, 1623.4659999999999, 0, ""]
+      - [2624.4639999999999, 1625.2190000000001, 0, ""]
+      - [3004.4229999999998, 37.652999999999999, 0, ""]
+      - [3004.6550000000002, 1570.354, 0, ""]
+      - [125.203, 1571.9179999999999, 0, ""]
+      - [126.74299999999999, 38.206000000000003, 0, ""]
+      - [385.82400000000001, 744.09000000000003, 0, 0_a, {is_charger: [4, true]}]
+      - [2714.5500000000002, 744.09000000000003, 0, 0_b]
+      - [1383.4559999999999, 744.09000000000003, 0, "", {is_parking_spot: [4, true]}]
+      - [1716.9179999999999, 744.09000000000003, 0, "", {is_parking_spot: [4, true]}]
+      - [1541.2080000000001, 535.95600000000002, 0, ""]
+      - [1541.2080000000001, 927.92399999999998, 0, ""]
+      - [1865.778, 527.33299999999997, 0, ""]
+      - [1865.778, 920.22199999999998, 0, ""]
+      - [1993.778, 744.09000000000003, 0, "", {is_parking_spot: [4, true]}]
+    walls:
+      - [7, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [6, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [5, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [4, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+lifts: {}
+name: building
