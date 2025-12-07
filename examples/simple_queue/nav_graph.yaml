@@ -1,0 +1,109 @@
+building_name: building
+doors: {}
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {}
+    - - 1
+      - 0
+      - {}
+    - - 2
+      - 3
+      - {}
+    - - 3
+      - 2
+      - {}
+    - - 4
+      - 5
+      - {}
+    - - 5
+      - 4
+      - {}
+    - - 5
+      - 3
+      - {}
+    - - 3
+      - 5
+      - {}
+    - - 3
+      - 1
+      - {}
+    - - 1
+      - 3
+      - {}
+    - - 6
+      - 7
+      - {mutex: storeroom_mutex_0}
+    - - 7
+      - 6
+      - {mutex: storeroom_mutex_0}
+    - - 1
+      - 8
+      - {is_bidirectional: false}
+    - - 8
+      - 9
+      - {is_bidirectional: false}
+    - - 9
+      - 10
+      - {is_bidirectional: false}
+    - - 6
+      - 5
+      - {is_bidirectional: false}
+    - - 6
+      - 3
+      - {is_bidirectional: false}
+    - - 6
+      - 1
+      - {is_bidirectional: false}
+    - - 10
+      - 11
+      - {is_bidirectional: false}
+    - - 11
+      - 12
+      - {is_bidirectional: false}
+    - - 12
+      - 6
+      - {is_bidirectional: false}
+    vertices:
+    - - 15.319586900302037
+      - -12.269242555915378
+      - {is_charger: true, name: charger_3}
+    - - 15.335025340093251
+      - -10.775311461251222
+      - {mutex: charger_mutex_3, name: ''}
+    - - 16.987737856660726
+      - -12.269242555915378
+      - {is_charger: true, name: charger_2}
+    - - 16.98752466761873
+      - -10.77057688794356
+      - {mutex: charger_mutex_2, name: ''}
+    - - 18.59047530863362
+      - -12.252880296942182
+      - {is_charger: true, name: charger_1}
+    - - 18.58518111409072
+      - -10.765993323540645
+      - {mutex: charger_mutex_1, name: ''}
+    - - 7.649347187093212
+      - -7.755408735486252
+      - {mutex: storeroom_mutex_0, name: ''}
+    - - 4.411165530954523
+      - -7.755408735486252
+      - {dropoff_ingestor: invisibot_ingestor, mutex: storeroom_mutex_0, name: storeroom}
+    - - 13.190992027615604
+      - -10.781458411962108
+      - {mutex: loading_point_mutex_2, name: ''}
+    - - 11.698650967889668
+      - -10.785731075678779
+      - {mutex: loading_point_mutex_1, name: ''}
+    - - 7.649347187093212
+      - -10.797340995590815
+      - {mutex: loading_point_mutex_0, name: loading_point, pickup_dispenser: invisibot_dispenser}
+    - - 7.649347187093212
+      - -9.75065386240415
+      - {mutex: storeroom_mutex_2, name: ''}
+    - - 7.649347187093212
+      - -8.720320105313931
+      - {mutex: storeroom_mutex_1, name: ''}
+lifts: {}
