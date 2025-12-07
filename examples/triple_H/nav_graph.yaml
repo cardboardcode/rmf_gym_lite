@@ -5,208 +5,256 @@ levels:
     lanes:
     - - 0
       - 1
-      - {}
-    - - 1
-      - 0
-      - {}
+      - {is_bidirectional: false}
     - - 1
       - 2
-      - {}
+      - {mutex: 5}
     - - 2
       - 1
-      - {}
+      - {mutex: 5}
     - - 2
       - 3
-      - {}
+      - {mutex: 5}
     - - 3
       - 2
-      - {}
-    - - 3
+      - {mutex: 5}
+    - - 2
       - 4
-      - {}
+      - {mutex: 5}
     - - 4
-      - 3
-      - {}
-    - - 2
-      - 5
-      - {}
-    - - 5
       - 2
-      - {}
+      - {mutex: 5}
+    - - 4
+      - 5
+      - {mutex: 5}
+    - - 5
+      - 4
+      - {mutex: 5}
     - - 5
       - 6
-      - {}
+      - {mutex: 5}
     - - 6
       - 5
-      - {}
+      - {mutex: 5}
     - - 6
       - 7
-      - {}
+      - {mutex: 5}
     - - 7
       - 6
-      - {}
+      - {mutex: 5}
     - - 7
       - 8
-      - {}
+      - {mutex: 5}
     - - 8
       - 7
-      - {}
+      - {mutex: 5}
     - - 8
       - 9
-      - {}
+      - {mutex: 5}
     - - 9
       - 8
-      - {}
-    - - 9
-      - 10
-      - {}
+      - {mutex: 5}
     - - 10
-      - 9
-      - {}
-    - - 11
-      - 12
-      - {}
-    - - 12
+      - 5
+      - {mutex: 5}
+    - - 5
+      - 10
+      - {mutex: 5}
+    - - 5
       - 11
-      - {}
+      - {mutex: 5}
+    - - 11
+      - 5
+      - {mutex: 5}
     - - 12
-      - 6
-      - {}
-    - - 6
+      - 7
+      - {mutex: 5}
+    - - 7
       - 12
-      - {}
-    - - 6
+      - {mutex: 5}
+    - - 7
       - 13
-      - {}
+      - {mutex: 5}
     - - 13
-      - 6
-      - {}
-    - - 13
-      - 14
-      - {}
+      - 7
+      - {mutex: 5}
     - - 14
-      - 13
-      - {}
-    - - 15
-      - 16
-      - {}
-    - - 16
+      - 9
+      - {mutex: 5}
+    - - 9
+      - 14
+      - {mutex: 5}
+    - - 9
       - 15
-      - {}
-    - - 16
-      - 8
-      - {}
-    - - 8
+      - {mutex: 5}
+    - - 15
+      - 9
+      - {mutex: 5}
+    - - 1
       - 16
-      - {}
-    - - 8
+      - {is_bidirectional: false, mutex: h1}
+    - - 16
+      - 0
+      - {is_bidirectional: false, mutex: h1}
+    - - 15
       - 17
-      - {}
-    - - 17
-      - 8
-      - {}
+      - {is_bidirectional: false, mutex: h4}
     - - 17
       - 18
-      - {}
+      - {is_bidirectional: false, mutex: h4}
     - - 18
-      - 17
-      - {}
+      - 15
+      - {is_bidirectional: false}
+    - - 3
+      - 19
+      - {is_bidirectional: false, mutex: h2}
     - - 19
       - 20
-      - {}
+      - {is_bidirectional: false, mutex: h2}
     - - 20
-      - 19
-      - {}
-    - - 20
-      - 10
-      - {}
-    - - 10
-      - 20
-      - {}
-    - - 10
-      - 21
-      - {}
+      - 3
+      - {is_bidirectional: false}
     - - 21
-      - 10
-      - {}
-    - - 21
+      - 14
+      - {is_bidirectional: false}
+    - - 14
       - 22
-      - {}
+      - {is_bidirectional: false, mutex: h3}
     - - 22
       - 21
-      - {}
+      - {is_bidirectional: false, mutex: h3}
+    - - 23
+      - 10
+      - {is_bidirectional: false}
+    - - 24
+      - 12
+      - {is_bidirectional: false}
+    - - 25
+      - 13
+      - {is_bidirectional: false}
+    - - 26
+      - 11
+      - {is_bidirectional: false}
+    - - 11
+      - 27
+      - {is_bidirectional: false, mutex: h7}
+    - - 27
+      - 26
+      - {is_bidirectional: false, mutex: h7}
+    - - 13
+      - 28
+      - {is_bidirectional: false, mutex: h9}
+    - - 28
+      - 25
+      - {is_bidirectional: false, mutex: h9}
+    - - 10
+      - 29
+      - {is_bidirectional: false, mutex: h6}
+    - - 29
+      - 23
+      - {is_bidirectional: false, mutex: h6}
+    - - 12
+      - 30
+      - {is_bidirectional: false, mutex: h8}
+    - - 30
+      - 24
+      - {is_bidirectional: false, mutex: h8}
     vertices:
     - - 2.047875625810603
       - -1.7817330593610106
-      - {is_parking_spot: true, name: TopLeft}
+      - {is_parking_spot: true, mutex: 1, name: TopLeft}
     - - 2.047875625810603
       - -4.823911306890776
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 2.048714774294264
       - -7.090230532711283
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 2.0473898030042728
       - -9.36750285452905
-      - {name: ''}
-    - - 2.0466831516496105
-      - -12.392456475288927
-      - {is_parking_spot: true, name: BottomLeft}
+      - {mutex: 5, name: ''}
     - - 4.7004681483732496
       - -7.0888172300019585
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 7.350366562646247
       - -7.0883314071956285
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 10.000618302596576
       - -7.087978081518297
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 12.653210825159224
       - -7.082148207842336
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 15.308806615979185
       - -7.083296516293661
       - {name: ''}
     - - 17.963386595476816
       - -7.07843828823036
-      - {name: ''}
-    - - 7.353899819419558
-      - -1.7822188821673408
-      - {is_charger: true, is_parking_spot: true, name: TopCenterLeft, spawn_robot_name: tinyRobotTopLeft,
-        spawn_robot_type: Open-RMF/TinyRobot}
+      - {mutex: 5, name: ''}
     - - 7.353855653709891
       - -4.830138671953735
-      - {name: ''}
+      - {mutex: 5, name: ''}
     - - 7.35107321400091
       - -9.35668225566079
-      - {name: ''}
-    - - 7.35045489406558
-      - -12.405794519608175
-      - {is_charger: true, is_parking_spot: true, name: BottomCenterLeft, spawn_robot_name: tinyRobotBottomLeft,
+      - {mutex: 5, name: ''}
+    - - 12.654844956416879
+      - -4.8098224455072005
+      - {mutex: 5, name: ''}
+    - - 12.652062516707899
+      - -9.354606467306468
+      - {mutex: 5, name: ''}
+    - - 17.963916583992813
+      - -4.81861142173081
+      - {mutex: 5, name: ''}
+    - - 17.960869150025836
+      - -9.358934706853773
+      - {mutex: 5, name: ''}
+    - - 1.3362335459562584
+      - -3.219856897517602
+      - {mutex: h1, name: ''}
+    - - 18.6594823455286
+      - -10.759915183180942
+      - {mutex: h4, name: ''}
+    - - 17.961840795638494
+      - -12.384197487581316
+      - {is_parking_spot: true, mutex: 4, name: BottomRight}
+    - - 1.381194238396631
+      - -10.785884620464772
+      - {name: h2}
+    - - 2.0466831516496105
+      - -12.392456475288927
+      - {is_parking_spot: true, mutex: 2, name: BottomLeft}
+    - - 17.962812441251153
+      - -1.786812115972644
+      - {is_parking_spot: true, mutex: 3, name: TopRight}
+    - - 18.614035830281892
+      - -3.1732620738195743
+      - {mutex: h3, name: ''}
+    - - 7.353899819419558
+      - -1.7822188821673408
+      - {is_charger: true, is_parking_spot: true, mutex: 6, name: TopCenterLeft, spawn_robot_name: tinyRobotTopLeft,
         spawn_robot_type: Open-RMF/TinyRobot}
     - - 12.654800790707212
       - -1.7776256483620376
-      - {is_charger: true, is_parking_spot: true, name: TopCenterRight, spawn_robot_name: tinyRobotTopRight,
-        spawn_robot_type: Open-RMF/TinyRobot}
-    - - 12.654844956416879
-      - -4.8098224455072005
-      - {name: ''}
-    - - 12.652062516707899
-      - -9.354606467306468
-      - {name: ''}
+      - {is_charger: true, is_parking_spot: true, mutex: 8, name: TopCenterRight,
+        spawn_robot_name: tinyRobotTopRight, spawn_robot_type: Open-RMF/TinyRobot}
     - - 12.652680836643228
       - -12.385831618838973
-      - {is_charger: true, is_parking_spot: true, name: BottomCenterRight, spawn_robot_name: tinyRobotBottomRight,
-        spawn_robot_type: Open-RMF/TinyRobot}
-    - - 17.962812441251153
-      - -1.786812115972644
-      - {is_parking_spot: true, name: TopRight}
-    - - 17.963916583992813
-      - -4.81861142173081
-      - {name: ''}
-    - - 17.960869150025836
-      - -9.358934706853773
-      - {name: ''}
-    - - 17.961840795638494
-      - -12.384197487581316
-      - {is_parking_spot: true, name: BottomRight}
+      - {is_charger: true, is_parking_spot: true, mutex: 9, name: BottomCenterRight,
+        spawn_robot_name: tinyRobotBottomRight, spawn_robot_type: Open-RMF/TinyRobot}
+    - - 7.35045489406558
+      - -12.405794519608175
+      - {is_charger: true, is_parking_spot: true, mutex: 7, name: BottomCenterLeft,
+        spawn_robot_name: tinyRobotBottomLeft, spawn_robot_type: Open-RMF/TinyRobot}
+    - - 6.6097076115410935
+      - -10.952786837294013
+      - {mutex: h7, name: ''}
+    - - 13.403056243874984
+      - -10.92845153126784
+      - {mutex: h9, name: ''}
+    - - 6.5671760331323705
+      - -3.217913606292282
+      - {name: h6}
+    - - 13.443732862477717
+      - -3.2382739984484816
+      - {mutex: h8, name: ''}
 lifts: {}
