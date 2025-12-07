@@ -37,7 +37,7 @@ services:
      image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy
      volumes:
       - ./0_config.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
-      - ./0.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
+      - ./nav_graph.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
      network_mode: "host"
@@ -51,7 +51,7 @@ services:
      image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy
      volumes:
       - ./1_config.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
-      - ./0.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
+      - ./nav_graph.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
      network_mode: "host"
