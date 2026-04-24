@@ -1,0 +1,18 @@
+services:
+   rmf_core:
+     volumes:
+      - ./simple_doors/:/rmf_core_ws/map/simple_doors
+      - ./simple_doors/debug.rviz:/rmf_core_ws/install/rmf_core/rviz/debug.rviz
+     command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/simple_doors/simple_doors.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/simple_doors/simple_doors.building.yaml headless:=true"
+   fleet_adapter_invisibot:
+     volumes:
+      - ./simple_doors/config.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
+      - ./simple_doors/nav_graph.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
+   invisibot:
+     volumes:
+       - ./simple_doors/robots.json:/invisibot_ws/robots.json
+   lift_adapter_mock:
+     scale: 0
+   door_adapter_mock:
+     volumes:
+      - ./simple_doors/door_config.yaml:/door_adapter_mock_ws/src/door_adapter_mock/configs/config.yaml

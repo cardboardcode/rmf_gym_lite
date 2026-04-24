@@ -1,41 +1,44 @@
 #!/usr/bin/env bash
 
-google-chrome http://localhost:3000 >/dev/null 2>&1 &
-
-echo "Initialising [RMF Dashboard] docker container @ http://localhost:3000"
-echo "Initialising [RMF API Server] docker container @ http://localhost:8000/docs"
-
-echo "Removing docker containers:"
+export DISPLAY=${DISPLAY:-:0}
+HOST_IP=$(ip route get 1 | awk '{print $7;exit}')
+export WS_URL="ws://${HOST_IP}:8000"
 
 set -euo pipefail
 
-COMPOSE_FILE="examples/simple_queue/docker-compose.yaml"
+# 1. Define Variables
+PROJECT_NAME="simple_queue"
+COMPOSE_FILE="examples/docker-compose.base.yaml"
+OVERRIDE_FILE="examples/simple_queue/docker-compose.override.yaml"
 
-# --- Function to clean containers for this compose file ---
+# 2. Updated Cleanup Function
 cleanup() {
-    echo "🧹 Cleaning up containers for $COMPOSE_FILE ..."
-
-    # Stop and remove containers, networks, etc.
-    docker compose -f "$COMPOSE_FILE" down --remove-orphans --volumes || true
-
+    echo -e "🧹 Cleaning up containers for project: $PROJECT_NAME ..."
+    
+    # 1. Standard Compose cleanup
+    docker compose -p "$PROJECT_NAME" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" down --remove-orphans --volumes || true
+    
+    # 2. Force remove specific problematic names (The "Nuclear" option for fixed names)
+    # This ensures that even if Compose doesn't 'own' them, they are gone.
+    docker rm -f lift_adapter_mock_c /fleet_adapter_invisibot_c lift_adapter_mock_c door_adapter_mock_c invisibot_c rmf_core_c 2>/dev/null || true
+    
     echo "Cleanup complete."
 }
 
-# Ensure cleanup runs on CTRL+C or script termination
-trap cleanup EXIT
+# 3. Setup Traps
+trap cleanup SIGINT SIGTERM ERR
 
-# ------------------------------------------------------------
-# 1. Pre-cleanup before running
-# ------------------------------------------------------------
-echo "🔍 Pre-run cleanup..."
+# 4. Pre-run cleanup
+echo -e "\U0001f50d Pre-run cleanup..."
 cleanup
 
-# ------------------------------------------------------------
-# 2. Run docker compose up
-# ------------------------------------------------------------
-echo "🚀 Starting docker compose..."
-docker compose -f "$COMPOSE_FILE" up
+# 5. Run docker compose up
+echo -e "\U0001f680 Starting docker compose..."
+# Apply the project name here as well
+docker compose -p "$PROJECT_NAME" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" up -d
 
-# ------------------------------------------------------------
-# 3. After docker compose exits, cleanup is triggered by trap
-# ------------------------------------------------------------
+echo "-------------------------------------------------------"
+echo "Done! Project '$PROJECT_NAME' is running."
+echo "-------------------------------------------------------"
+
+wait
