@@ -28,5 +28,18 @@ bash scripts/1_run_triple_h_scenario.bash
 ### **simple_deconfliction**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_deconfliction.png)
 
+### **simple_lift**
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_lift.png)
+
+### **simple_doors**
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_doors.png)
+
+### **simple_queue**
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_queue.png)
+
+### **lift_queue**
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/lift_queue.png)
+
+
 ## **Maintainer(s)**
 - [cardboardcode](https://github.com/cardboardcode)

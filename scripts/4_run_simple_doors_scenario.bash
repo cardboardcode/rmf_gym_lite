@@ -9,7 +9,7 @@ set -euo pipefail
 # 1. Define Variables
 PROJECT_NAME="simple_doors"
 COMPOSE_FILE="examples/docker-compose.base.yaml"
-OVERRIDE_FILE="examples/triple_H/docker-compose.override.yaml"
+OVERRIDE_FILE="examples/simple_doors/docker-compose.override.yaml"
 
 # 2. Updated Cleanup Function
 cleanup() {
