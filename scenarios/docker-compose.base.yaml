@@ -1,4 +1,21 @@
 services:
+   rmf_web_dashboard:
+     container_name: rmf_web_dashboard_c
+     image: ghcr.io/cardboardcode/rmf_dashboard:jazzy
+     environment:
+      RMF_SERVER_URL: http://localhost:8000
+      TRAJECTORY_SERVER_URL: http://localhost:8006
+      PORT: 3000
+     network_mode: "host"
+     restart: unless-stopped
+   rmf_web_api_server:
+     container_name: rmf_web_api_server_c
+     image: ghcr.io/cardboardcode/rmf_api_server:jazzy
+     environment:
+      RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+      RCUTILS_COLORIZED_OUTPUT: 1
+     network_mode: "host"
+     restart: unless-stopped
    rmf_core:
      container_name: rmf_core_c
      image: ghcr.io/cardboardcode/rmf_core:jazzy
