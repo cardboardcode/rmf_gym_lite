@@ -4,6 +4,9 @@ This is a collection of **lightweight simulated RMF deployments** you can run lo
 
 These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tree/devel/gary) and [fleet_adapter_invisibot](https://github.com/cardboardcode/fleet_adapter_invisibot) in order to skip setting up a physical robot as well as avoid using computationally-heavy Gazebo simulations.
 
+> !TIP
+> `rmf_gym_lite` is best used in order to help identify potential deadlocks in your RMF Map Building `.yaml` file and allow ease of finetuning based on [recommended graph strategies](https://osrf.github.io/ros2multirobotbook/integration_nav-maps-strategies.html).
+
 ## **Build**
 
 ```bash
