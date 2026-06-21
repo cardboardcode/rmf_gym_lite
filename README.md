@@ -40,7 +40,7 @@ bash scripts/2_deploy_docker_compose.bash
 ### **simple_doors**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_doors.png)
 
-### **simple_queue**
+### **delivery_queue**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_queue.png)
 
 ### **lift_queue**
