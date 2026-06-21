@@ -51,6 +51,8 @@ fi
 
 echo "${scenario_name}"
 
+python3 scripts/populate_base.py $scenario_name 
+
 # 1. Define Variables
 PROJECT_NAME="${scenario_name}"
 COMPOSE_FILE="scenarios/docker-compose.base.yaml"
