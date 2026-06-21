@@ -17,7 +17,7 @@ graphs:
 levels:
   L1:
     drawing:
-      filename: lift_queue.png
+      filename: lift_queue_L1.png
     elevation: 0
     fiducials:
       - [-0.024, -0.79200000000000004, g1]
@@ -76,7 +76,7 @@ levels:
       - [7, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
   L2:
     drawing:
-      filename: lift_queue.png
+      filename: lift_queue_L2.png
     elevation: 0
     fiducials:
       - [-1.615, -0.80800000000000005, g1]
@@ -159,4 +159,4 @@ lifts:
     x: 2000
     y: 550
     yaw: 3.1400000000000001
-name: building
+name: lift_queue

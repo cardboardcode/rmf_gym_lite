@@ -5,8 +5,20 @@ export DISPLAY=${DISPLAY:-:0}
 # export WS_URL="ws://${HOST_IP}:8000"
 
 export WS_URL="ws://localhost:8000"
+export HEADLESS=true
 
 set -euo pipefail
+
+# Loop through all input arguments
+for arg in "$@"; do
+  if [ "$arg" = "-y" ]; then
+    export HEADLESS=false
+    break
+  fi
+done
+
+# Echo the final result
+echo "HEADLESS is set to: $HEADLESS"
 
 # Get the subdirectory name
 subdirectory="scenarios"

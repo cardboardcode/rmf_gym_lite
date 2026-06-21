@@ -3,7 +3,7 @@ services:
      volumes:
       - ./simple_deconfliction/:/rmf_core_ws/map/simple_deconfliction
       - ./simple_deconfliction/debug.rviz:/rmf_core_ws/install/rmf_core/rviz/debug.rviz
-     command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/simple_deconfliction/simple_deconfliction.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/simple_deconfliction/simple_deconfliction.building.yaml headless:=true"
+     command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/simple_deconfliction/simple_deconfliction.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/simple_deconfliction/simple_deconfliction.building.yaml headless:=${HEADLESS:-true}"
    fleet_adapter_invisibot:
      scale: 0
    fleet_adapter_invisibot_a:

@@ -3,7 +3,7 @@ services:
      volumes:
       - ./lift_queue/:/rmf_core_ws/map/lift_queue
       - ./lift_queue/debug.rviz:/rmf_core_ws/install/rmf_core/rviz/debug.rviz
-     command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/lift_queue/lift_queue.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/lift_queue/lift_queue.building.yaml headless:=true"
+     command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/lift_queue/lift_queue.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/lift_queue/lift_queue.building.yaml headless:=${HEADLESS:-true}"
    fleet_adapter_invisibot:
      volumes:
       - ./fleet_config.base.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
