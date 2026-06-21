@@ -8,7 +8,6 @@ export WS_URL="ws://localhost:8000"
 
 set -euo pipefail
 
-# TODO
 # Get the subdirectory name
 subdirectory="scenarios"
 
