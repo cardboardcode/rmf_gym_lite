@@ -77,7 +77,7 @@ cleanup() {
     echo -e "🧹 Cleaning up containers..."
     
     # 1. Standard Compose cleanup
-    docker compose -f "${PROJECT_NAME,,}" -f "$OVERRIDE_FILE" down --remove-orphans --volumes || true
+    docker compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes || true
     
     # 2. Force remove specific problematic names (The "Nuclear" option for fixed names)
     # This ensures that even if Compose doesn't 'own' them, they are gone.
