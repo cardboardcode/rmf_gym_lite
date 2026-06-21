@@ -1,8 +1,0 @@
-base_url: http://127.0.0.1:8888
-lifts:
-- available_floors:
-  - L1
-  - L2
-  name: Lift1
-password: password
-user: username

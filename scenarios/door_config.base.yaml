@@ -1,6 +1,0 @@
-door_publisher:
-  door_state_publish_period: 1.0
-  topic_name: door_states
-door_subscriber:
-  topic_name: adapter_door_requests
-doors: []

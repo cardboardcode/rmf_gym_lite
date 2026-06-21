@@ -1,3 +1,7 @@
+scenarios/fleet_config.base.yaml
+scenarios/door_config.base.yaml
+scenarios/lift_config.base.yaml
+scenarios/robots.base.json
 *.txt
 *.backup
 *.log
