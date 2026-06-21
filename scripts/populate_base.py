@@ -3,6 +3,11 @@ import yaml
 import json
 from pathlib import Path
 
+DEFAULT_DOOR_CONFIG_YAML_PATH = "scripts/configs/door_config.base.yaml"
+DEFAULT_LIFT_CONFIG_YAML_PATH = "scripts/configs/lift_config.base.yaml"
+DEFAULT_FLEET_CONFIG_YAML_PATH = "scripts/configs/fleet_config.base.yaml"
+DEFAULT_FLEET_JSON_YAML_PATH = "scripts/configs/robots.base.json"
+
 BASE_DOOR_CONFIG_YAML_PATH = "scenarios/door_config.base.yaml"
 BASE_LIFT_CONFIG_YAML_PATH = "scenarios/lift_config.base.yaml"
 BASE_FLEET_CONFIG_YAML_PATH = "scenarios/fleet_config.base.yaml"
