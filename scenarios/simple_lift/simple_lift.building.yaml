@@ -17,7 +17,7 @@ crowd_sim:
 levels:
   L1:
     drawing:
-      filename: simple_lift.png
+      filename: simple_lift_L1.png
     elevation: 0
     fiducials:
       - [2873.978, 1468.378, fid_0]
@@ -54,7 +54,7 @@ levels:
       - [4, 7, {alpha: [3, 1], texture_name: [1, default]}]
   L3:
     drawing:
-      filename: simple_lift.png
+      filename: simple_lift_L3.png
     elevation: 20
     fiducials:
       - [182.79, 105.243, fid_1]

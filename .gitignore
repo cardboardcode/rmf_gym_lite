@@ -5,3 +5,5 @@ scenarios/robots.base.json
 *.txt
 *.backup
 *.log
+*.jpeg~
+*.png~

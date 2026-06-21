@@ -104,7 +104,7 @@ def main():
     NAVIGATION_GRAPH_DATA = get_navigation_graph_data(input_scenario=input_scenario)
 
     # Read BASE_DOOR_CONFIG_YAML_PATH
-    base_door_config = get_dict_from_yaml(BASE_DOOR_CONFIG_YAML_PATH)
+    base_door_config = get_dict_from_yaml(DEFAULT_DOOR_CONFIG_YAML_PATH)
     # Get all doors from BUILDING_DATA
     doors = []
     for floor_name, floor_content in BUILDING_DATA['levels'].items():
@@ -120,7 +120,7 @@ def main():
     print(f"\n[INFO] Successfully updated [{BASE_DOOR_CONFIG_YAML_PATH}]...")
 
     # Read BASE_LIFT_CONFIG_YAML_PATH
-    base_lift_config = get_dict_from_yaml(BASE_LIFT_CONFIG_YAML_PATH)
+    base_lift_config = get_dict_from_yaml(DEFAULT_LIFT_CONFIG_YAML_PATH)
     # Get all lifts from BUILDING_DATA
     lifts = []
     for lift_name, lift_data in BUILDING_DATA['lifts'].items():
@@ -139,7 +139,7 @@ def main():
     print(f"\n[INFO] Successfully updated [{BASE_LIFT_CONFIG_YAML_PATH}]...")
 
     # Read BASE_FLEET_CONFIG_YAML_PATH
-    base_fleet_config = get_dict_from_yaml(BASE_FLEET_CONFIG_YAML_PATH)
+    base_fleet_config = get_dict_from_yaml(DEFAULT_FLEET_CONFIG_YAML_PATH)
 
     # Get all chargers' info from NAVIGATION_GRAPH_DATA
     charger_locations = []
