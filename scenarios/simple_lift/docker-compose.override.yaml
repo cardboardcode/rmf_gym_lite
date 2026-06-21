@@ -6,13 +6,13 @@ services:
      command: bash -c "python3 /rmf_core_ws/src/rmf_core/rviz/update_map_name.py /rmf_core_ws/map/simple_lift/simple_lift.building.yaml && ros2 launch rmf_core start_rmf_core.launch.xml config_file:=/rmf_core_ws/map/simple_lift/simple_lift.building.yaml headless:=true"
    fleet_adapter_invisibot:
      volumes:
-      - ./simple_lift/config.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
+      - ./fleet_config.base.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
       - ./simple_lift/nav_graph.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
    invisibot:
      volumes:
-       - ./simple_lift/robots.json:/invisibot_ws/robots.json
+       - ./robots.base.json:/invisibot_ws/robots.json
    lift_adapter_mock:
      volumes:
-      - ./simple_lift/lift_config.yaml:/lift_adapter_mock_ws/src/lift_adapter_mock/configs/config.yaml
+      - ./lift_config.base.yaml:/lift_adapter_mock_ws/src/lift_adapter_mock/configs/config.yaml
    door_adapter_mock:
      scale: 0
