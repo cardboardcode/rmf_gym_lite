@@ -63,14 +63,11 @@ docker run -it --rm \
   --ipc=host \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v ./maps/:/rmf_core_ws/map/ \
+  -v ./scenarios/:/rmf_core_ws/map/ \
   -u root \
   rmf_core:jazzy bash -c \
   "ros2 run rmf_building_map_tools building_map_generator nav /rmf_core_ws/map/$building_yaml_file '/rmf_core_ws/map/$selected_subdir/'"
 
-echo "Renaming [$RMF_MAP_DIR/$selected_subdir/0.yaml] to [$(pwd)/configs/nav_graph.yaml]"
-cp $RMF_MAP_DIR/$selected_subdir/0.yaml $(pwd)/configs/nav_graph.yaml
-# DEBUG
+echo "Renaming [$RMF_MAP_DIR/$selected_subdir/0.yaml] to [$RMF_MAP_DIR/$selected_subdir/nav_graph.yaml]"
+cp $RMF_MAP_DIR/$selected_subdir/0.yaml $RMF_MAP_DIR/$selected_subdir/nav_graph.yaml
 rm -f $RMF_MAP_DIR/$selected_subdir/0.yaml
-# DEBUG
-rm -f $RMF_MAP_DIR/$selected_subdir/1.yaml
