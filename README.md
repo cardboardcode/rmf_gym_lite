@@ -14,16 +14,19 @@ git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-b
 ```
 
 ```bash
-docker compose -f examples/simple_lift/docker-compose.yaml build
+bash scripts/1_pull_docker_compose.bash
 ```
 
 ## **Run**
 
 ```bash
-bash scripts/1_run_triple_h_scenario.bash
+bash scripts/2_deploy_docker_compose.bash
 ```
 
-## **Verify**
+> To stop the deployment, run the command below:
+> `bash scripts/3_stop_docker_compose.bash`
+
+## **Scenario(s)**
 
 ### **triple_H**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.png)
