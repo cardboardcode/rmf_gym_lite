@@ -25,6 +25,7 @@ services:
       XDG_RUNTIME_DIR: $XDG_RUNTIME_DIR
       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
       DISPLAY: $DISPLAY
+      RCUTILS_COLORIZED_OUTPUT: 1
      devices:
       - "/dev/dri:/dev/dri"
      network_mode: "host"
@@ -39,6 +40,7 @@ services:
      image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy_delivery
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+       RCUTILS_COLORIZED_OUTPUT: 1
      network_mode: "host"
      command: bash -c "ros2 launch fleet_adapter_invisibot fleet_adapter.launch.xml config_file:=/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml nav_graph_file:=/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml server_uri:=${WS_URL:-ws://localhost:8000}/_internal use_sim_time:=false enable_workcell:=true"
      depends_on:
@@ -57,6 +59,7 @@ services:
       - ./door_config.yaml:/door_adapter_mock_ws/src/door_adapter_mock/configs/config.yaml
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+       RCUTILS_COLORIZED_OUTPUT: 1
      network_mode: "host"
      command: bash -c "source /ros_entrypoint.sh && ros2 launch door_adapter_mock run.launch.xml config_file:=/door_adapter_mock_ws/src/door_adapter_mock/configs/config.yaml"
      restart: unless-stopped
@@ -65,6 +68,7 @@ services:
      image: ghcr.io/cardboardcode/lift_adapter_mock:jazzy
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+       RCUTILS_COLORIZED_OUTPUT: 1
      network_mode: "host"
      command: bash -c "source /ros_entrypoint.sh && ros2 launch lift_adapter_mock run.launch.py config_file:=/lift_adapter_mock_ws/src/lift_adapter_mock/configs/config.yaml"
      restart: unless-stopped
