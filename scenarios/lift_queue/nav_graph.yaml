@@ -1,4 +1,4 @@
-building_name: building
+building_name: lift_queue
 doors: {}
 levels:
   L1:
@@ -9,23 +9,11 @@ levels:
     - - 1
       - 0
       - {}
-    - - 0
-      - 2
-      - {}
-    - - 2
-      - 0
-      - {}
     - - 2
       - 3
       - {}
     - - 3
       - 2
-      - {}
-    - - 0
-      - 4
-      - {}
-    - - 4
-      - 0
       - {}
     - - 4
       - 5
@@ -33,197 +21,158 @@ levels:
     - - 5
       - 4
       - {}
-    - - 2
+    - - 6
+      - 4
+      - {mutex: queue_1}
+    - - 4
       - 6
-      - {}
+      - {mutex: queue_1}
+    - - 6
+      - 0
+      - {mutex: queue_1}
+    - - 0
+      - 6
+      - {mutex: queue_1}
     - - 6
       - 2
-      - {}
-    - - 3
-      - 7
-      - {is_bidirectional: false}
+      - {mutex: queue_1}
+    - - 2
+      - 6
+      - {mutex: queue_1}
     - - 7
       - 8
-      - {is_bidirectional: false}
+      - {mutex: lift}
     - - 8
-      - 9
-      - {is_bidirectional: false}
+      - 7
+      - {mutex: lift}
+    - - 9
+      - 8
+      - {is_bidirectional: false, mutex: lift}
+    - - 8
+      - 6
+      - {is_bidirectional: false, mutex: lift}
     - - 9
       - 10
-      - {is_bidirectional: false}
+      - {mutex: queue_0}
+    - - 10
+      - 9
+      - {mutex: queue_0}
     - - 10
       - 11
-      - {is_bidirectional: false, mutex: lift}
+      - {mutex: queue_4}
     - - 11
-      - 12
-      - {is_bidirectional: false, mutex: lift}
-    - - 12
-      - 13
-      - {is_bidirectional: false}
-    - - 13
-      - 3
-      - {}
-    - - 3
-      - 13
-      - {}
+      - 10
+      - {mutex: queue_4}
+    - - 11
+      - 6
+      - {mutex: queue_6}
+    - - 6
+      - 11
+      - {mutex: queue_6}
     vertices:
-    - - 6.295436878636719
-      - -4.25380536933118
+    - - 13.477802352114306
+      - -8.865057699075757
       - {mutex: charger_mutex_2, name: ''}
-    - - 8.569453326594717
-      - -4.25380536933118
+    - - 13.47432914730512
+      - -10.226953713730351
       - {is_charger: true, name: charger_2}
-    - - 6.295436878636719
-      - -5.78755840046485
-      - {mutex: charger_mutex_3, name: ''}
-    - - 6.295436878636719
-      - -8.40362778342878
-      - {name: ''}
-    - - 6.295436878636719
-      - -2.840877227748777
+    - - 15.10332438295053
+      - -8.865057699075757
       - {mutex: charger_mutex_1, name: ''}
-    - - 8.604043248658577
-      - -2.840877227748777
+    - - 15.11851410219275
+      - -10.226953713730351
       - {is_charger: true, name: charger_1}
-    - - 8.647160732402282
-      - -5.78755840046485
+    - - 11.96004738200709
+      - -8.87403828746984
+      - {mutex: charger_mutex_3, name: ''}
+    - - 11.955028556643434
+      - -10.226953713730351
       - {is_charger: true, name: charger_3}
-    - - 13.480724818565001
-      - -8.407216465635713
-      - {mutex: queue_L1_2, name: ''}
-    - - 14.820475821482257
-      - -8.407216465635713
-      - {mutex: queue_L1_1, name: ''}
-    - - 16.118370709154284
-      - -8.407216465635713
-      - {mutex: queue_L1_0, name: ''}
-    - - 17.75957101745397
-      - -8.415593018410808
-      - {mutex: lift, name: ''}
-    - - 17.765753499671856
-      - -4.88558221240976
-      - {lift: Lift1, lift_cabin: 1, mutex: lift, name: ''}
-    - - 18.41828074283805
-      - -9.56276325339162
-      - {mutex: lift, name: ''}
-    - - 6.282316869677212
-      - -9.551597477317076
-      - {name: ''}
+    - - 13.484206906250938
+      - -7.032973252298846
+      - {mutex: queue_1, name: ''}
+    - - 13.484206906250938
+      - -3.1090068624425746
+      - {lift: Lift1, lift_cabin: Lift1, mutex: lift, name: ''}
+    - - 13.484206906250938
+      - -4.878129478816647
+      - {mutex: lift, name: lift}
+    - - 11.969107916291922
+      - -4.876637155522675
+      - {mutex: queue_0, name: ''}
+    - - 11.965234982028994
+      - -5.9337616688904
+      - {mutex: queue_4, name: ''}
+    - - 11.969107916291922
+      - -7.017472632370382
+      - {mutex: queue_6, name: ''}
   L2:
     lanes:
     - - 0
       - 1
-      - {is_bidirectional: false, mutex: lift}
+      - {is_bidirectional: false, mutex: destination}
     - - 1
       - 2
-      - {is_bidirectional: false}
+      - {is_bidirectional: false, mutex: destination}
     - - 2
-      - 3
-      - {}
+      - 0
+      - {is_bidirectional: false}
     - - 3
-      - 2
-      - {}
-    - - 2
       - 4
-      - {}
+      - {mutex: lift}
     - - 4
-      - 2
-      - {}
+      - 3
+      - {mutex: lift}
     - - 4
-      - 5
-      - {}
-    - - 5
-      - 4
-      - {}
-    - - 4
-      - 6
-      - {}
-    - - 6
-      - 4
-      - {}
-    - - 6
-      - 7
-      - {}
-    - - 7
-      - 6
-      - {}
-    - - 6
-      - 8
-      - {is_bidirectional: false}
-    - - 4
-      - 9
-      - {is_bidirectional: false}
-    - - 2
-      - 10
-      - {is_bidirectional: false}
-    - - 8
-      - 9
-      - {is_bidirectional: false}
-    - - 9
-      - 10
-      - {is_bidirectional: false}
-    - - 10
-      - 11
-      - {is_bidirectional: false}
-    - - 11
-      - 12
-      - {is_bidirectional: false}
-    - - 12
-      - 13
-      - {is_bidirectional: false}
-    - - 13
-      - 14
-      - {is_bidirectional: false}
-    - - 14
       - 0
       - {is_bidirectional: false, mutex: lift}
+    - - 5
+      - 4
+      - {is_bidirectional: false, mutex: lift}
+    - - 5
+      - 6
+      - {mutex: queue_5}
+    - - 6
+      - 5
+      - {mutex: queue_5}
+    - - 6
+      - 7
+      - {mutex: queue_7}
+    - - 7
+      - 6
+      - {mutex: queue_7}
+    - - 7
+      - 0
+      - {mutex: queue_8}
+    - - 0
+      - 7
+      - {mutex: queue_8}
     vertices:
-    - - 17.774048957433155
-      - -4.892428740883915
-      - {lift: Lift1, lift_cabin: 1, mutex: lift, name: ''}
-    - - 18.746260454384323
-      - -8.400718853756397
+    - - 13.480527045643624
+      - -7.69312094776014
+      - {mutex: queue_3, name: ''}
+    - - 13.47953975805811
+      - -10.305719416951074
+      - {mutex: destination, name: destination}
+    - - 12.234340746958091
+      - -8.924657383943044
+      - {mutex: destination, name: ''}
+    - - 13.48225717440837
+      - -3.114787513194938
+      - {lift: Lift1, lift_cabin: Lift1, mutex: lift, name: ''}
+    - - 13.481610010687016
+      - -4.827337101117638
       - {mutex: lift, name: ''}
-    - - 7.936339078362112
-      - -8.396633839813088
-      - {name: ''}
-    - - 7.9466531860205585
-      - -10.458838526847583
-      - {name: destination_3}
-    - - 6.384150887685189
-      - -8.396047275842731
-      - {name: ''}
-    - - 6.383359022968812
-      - -10.491510215084176
-      - {name: destination_2}
-    - - 4.931741148221728
-      - -8.395498417638244
-      - {name: ''}
-    - - 4.930953472289025
-      - -10.479876836039878
-      - {name: destination_1}
-    - - 4.943278161746724
-      - -7.198099019067206
-      - {mutex: destination_1, name: ''}
-    - - 6.373518355270323
-      - -7.176470454668332
-      - {mutex: destination_2, name: ''}
-    - - 7.934723665141449
-      - -7.171598101410281
-      - {mutex: destination_3, name: ''}
-    - - 13.923835649043395
-      - -7.179323680917496
-      - {mutex: queue_L2_2, name: ''}
-    - - 14.966020417330414
-      - -7.179717517205649
-      - {mutex: queue_L2_1, name: ''}
-    - - 16.01929858828484
-      - -7.180115545633873
-      - {mutex: queue_L2_0, name: ''}
-    - - 17.77105256321628
-      - -7.180777524492361
-      - {mutex: lift, name: ''}
+    - - 15.17052529032456
+      - -4.827353605534389
+      - {mutex: queue_5, name: ''}
+    - - 15.170067826815156
+      - -6.037911179558777
+      - {mutex: queue_7, name: ''}
+    - - 15.169446819496988
+      - -7.681244685025849
+      - {mutex: queue_8, name: ''}
 lifts:
   Lift1:
     dims: [2.0, 2.0]
-    position: [17.765753499671856, -4.88558221240976, 3.14]
+    position: [13.484206906250938, -3.1090068624425746, 3.14]
