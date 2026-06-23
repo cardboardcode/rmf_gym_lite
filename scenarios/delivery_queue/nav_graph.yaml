@@ -23,18 +23,9 @@ levels:
       - {}
     - - 6
       - 7
-      - {mutex: storeroom_mutex_0}
+      - {is_bidirectional: false}
     - - 7
-      - 6
-      - {mutex: storeroom_mutex_0}
-    - - 8
-      - 9
-      - {is_bidirectional: false}
-    - - 9
-      - 10
-      - {is_bidirectional: false}
-    - - 10
-      - 6
+      - 8
       - {is_bidirectional: false}
     - - 5
       - 3
@@ -49,23 +40,35 @@ levels:
       - 3
       - {}
     - - 1
-      - 11
-      - {is_bidirectional: false}
+      - 9
+      - {is_bidirectional: false, mutex: queue_1}
+    - - 9
+      - 10
+      - {is_bidirectional: false, mutex: queue_0}
+    - - 10
+      - 6
+      - {is_bidirectional: false, mutex: loading_point_mutex_0}
     - - 11
-      - 12
-      - {is_bidirectional: false}
-    - - 12
-      - 8
-      - {is_bidirectional: false}
-    - - 6
       - 1
-      - {is_bidirectional: false}
-    - - 6
+      - {is_bidirectional: false, mutex: queue_1}
+    - - 11
       - 3
       - {is_bidirectional: false}
-    - - 6
+    - - 11
       - 5
       - {is_bidirectional: false}
+    - - 12
+      - 13
+      - {mutex: storeroom_mutex_0}
+    - - 13
+      - 12
+      - {mutex: storeroom_mutex_0}
+    - - 12
+      - 11
+      - {is_bidirectional: false, mutex: storeroom_mutex_0}
+    - - 8
+      - 12
+      - {is_bidirectional: false, mutex: storeroom_mutex_0}
     vertices:
     - - 15.319586900302037
       - -12.269242555915378
@@ -86,24 +89,27 @@ levels:
       - -10.791895792143167
       - {mutex: charger_mutex_1, name: ''}
     - - 7.649347187093212
-      - -7.755408735486252
-      - {mutex: storeroom_mutex_0, name: ''}
-    - - 4.411165530954523
-      - -7.755408735486252
-      - {dropoff_ingestor: invisibot_ingestor, mutex: storeroom_mutex_0, name: storeroom}
-    - - 7.649347187093212
       - -10.797340995590815
       - {mutex: loading_point_mutex_0, name: loading_point, pickup_dispenser: invisibot_dispenser}
     - - 7.649347187093212
       - -9.75065386240415
       - {mutex: storeroom_mutex_2, name: ''}
-    - - 7.649347187093212
-      - -8.720320105313931
+    - - 7.632780621954767
+      - -8.87941242790349
       - {mutex: storeroom_mutex_1, name: ''}
     - - 13.454493683522736
       - -10.791895792143167
-      - {name: ''}
+      - {mutex: queue_1, name: ''}
     - - 11.555165859749568
       - -10.791895792143167
-      - {name: ''}
+      - {mutex: queue_0, name: ''}
+    - - 9.112099384365443
+      - -7.762941414970114
+      - {mutex: storeroom_mutex_0, name: ''}
+    - - 7.632780621954767
+      - -7.762941414970114
+      - {mutex: storeroom_mutex_0, name: ''}
+    - - 4.411165530954523
+      - -7.755408735486252
+      - {dropoff_ingestor: invisibot_ingestor, mutex: storeroom_mutex_0, name: storeroom}
 lifts: {}
