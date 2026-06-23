@@ -31,7 +31,7 @@ fi
 
 # List directories in the subdirectory with numbers
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-directories=($(ls -d $SCRIPT_DIR/../$subdirectory/*/))
+directories=($(ls -d $SCRIPT_DIR/../$subdirectory/*/ | sort))
 num=1
 for dir in "${directories[@]}"; do
   processed_dir=$(basename "${dir%/}")

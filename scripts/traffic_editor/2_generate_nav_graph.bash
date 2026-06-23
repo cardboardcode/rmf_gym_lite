@@ -3,7 +3,7 @@
 RMF_MAP_DIR="$(pwd)/scenarios"
 
 # Set mindepth to 1 so the root /maps directory is ignored
-subdirs=$(find "$RMF_MAP_DIR" -mindepth 1 -maxdepth 1 -type d)
+subdirs=$(find "$RMF_MAP_DIR" -mindepth 1 -maxdepth 1 -type d | sort)
 
 # Check if the find command returned empty string (no directories found)
 if [ -z "$subdirs" ]; then
