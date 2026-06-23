@@ -69,19 +69,19 @@ levels:
     vertices:
     - - 15.319586900302037
       - -12.269242555915378
-      - {is_charger: true, name: charger_3}
+      - {is_charger: true, mutex: charger_3, name: charger_3}
     - - 15.317437244128577
       - -10.791895792143167
       - {mutex: charger_mutex_3, name: ''}
     - - 16.987737856660726
       - -12.269242555915378
-      - {is_charger: true, name: charger_2}
+      - {is_charger: true, mutex: charger_2, name: charger_2}
     - - 16.994222356688105
       - -10.782373348267342
       - {mutex: charger_mutex_2, name: ''}
     - - 18.59047530863362
       - -12.252880296942182
-      - {is_charger: true, name: charger_1}
+      - {is_charger: true, mutex: charger_1, name: charger_1}
     - - 18.585252177104717
       - -10.791895792143167
       - {mutex: charger_mutex_1, name: ''}
