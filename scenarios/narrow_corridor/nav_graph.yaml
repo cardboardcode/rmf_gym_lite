@@ -1,0 +1,474 @@
+building_name: narrow_corridor
+doors:
+  door1:
+    endpoints:
+    - [78.76954644631189, -19.425755535954742]
+    - [81.61000417807924, -19.425755535954742]
+    map: L1
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {mutex: narrow_corridor}
+    - - 1
+      - 0
+      - {mutex: narrow_corridor}
+    - - 2
+      - 3
+      - {mutex: narrow_corridor}
+    - - 3
+      - 2
+      - {mutex: narrow_corridor}
+    - - 3
+      - 4
+      - {mutex: narrow_corridor}
+    - - 4
+      - 3
+      - {mutex: narrow_corridor}
+    - - 2
+      - 5
+      - {mutex: narrow_corridor}
+    - - 5
+      - 2
+      - {mutex: narrow_corridor}
+    - - 5
+      - 6
+      - {mutex: narrow_corridor}
+    - - 6
+      - 5
+      - {mutex: narrow_corridor}
+    - - 6
+      - 7
+      - {mutex: narrow_corridor}
+    - - 7
+      - 6
+      - {mutex: narrow_corridor}
+    - - 7
+      - 8
+      - {mutex: narrow_corridor}
+    - - 8
+      - 7
+      - {mutex: narrow_corridor}
+    - - 8
+      - 9
+      - {mutex: narrow_corridor}
+    - - 9
+      - 8
+      - {mutex: narrow_corridor}
+    - - 9
+      - 10
+      - {mutex: narrow_corridor}
+    - - 10
+      - 9
+      - {mutex: narrow_corridor}
+    - - 10
+      - 11
+      - {mutex: narrow_corridor}
+    - - 11
+      - 10
+      - {mutex: narrow_corridor}
+    - - 11
+      - 12
+      - {mutex: narrow_corridor}
+    - - 12
+      - 11
+      - {mutex: narrow_corridor}
+    - - 12
+      - 13
+      - {mutex: narrow_corridor}
+    - - 13
+      - 12
+      - {mutex: narrow_corridor}
+    - - 13
+      - 14
+      - {mutex: narrow_corridor}
+    - - 14
+      - 13
+      - {mutex: narrow_corridor}
+    - - 14
+      - 15
+      - {mutex: narrow_corridor}
+    - - 15
+      - 14
+      - {mutex: narrow_corridor}
+    - - 15
+      - 16
+      - {mutex: narrow_corridor}
+    - - 16
+      - 15
+      - {mutex: narrow_corridor}
+    - - 16
+      - 17
+      - {mutex: narrow_corridor}
+    - - 17
+      - 16
+      - {mutex: narrow_corridor}
+    - - 17
+      - 18
+      - {mutex: narrow_corridor}
+    - - 18
+      - 17
+      - {mutex: narrow_corridor}
+    - - 18
+      - 19
+      - {mutex: narrow_corridor}
+    - - 19
+      - 18
+      - {mutex: narrow_corridor}
+    - - 20
+      - 21
+      - {mutex: narrow_corridor}
+    - - 21
+      - 20
+      - {mutex: narrow_corridor}
+    - - 19
+      - 22
+      - {mutex: narrow_corridor}
+    - - 22
+      - 19
+      - {mutex: narrow_corridor}
+    - - 22
+      - 23
+      - {mutex: narrow_corridor}
+    - - 23
+      - 22
+      - {mutex: narrow_corridor}
+    - - 23
+      - 24
+      - {mutex: narrow_corridor}
+    - - 24
+      - 23
+      - {mutex: narrow_corridor}
+    - - 24
+      - 25
+      - {mutex: narrow_corridor}
+    - - 25
+      - 24
+      - {mutex: narrow_corridor}
+    - - 25
+      - 26
+      - {mutex: narrow_corridor}
+    - - 26
+      - 25
+      - {mutex: narrow_corridor}
+    - - 26
+      - 27
+      - {mutex: narrow_corridor}
+    - - 27
+      - 26
+      - {mutex: narrow_corridor}
+    - - 22
+      - 20
+      - {mutex: narrow_corridor}
+    - - 20
+      - 22
+      - {mutex: narrow_corridor}
+    - - 1
+      - 28
+      - {mutex: narrow_corridor}
+    - - 28
+      - 1
+      - {mutex: narrow_corridor}
+    - - 27
+      - 29
+      - {mutex: narrow_corridor}
+    - - 29
+      - 27
+      - {mutex: narrow_corridor}
+    - - 29
+      - 30
+      - {mutex: narrow_corridor}
+    - - 30
+      - 29
+      - {mutex: narrow_corridor}
+    - - 30
+      - 31
+      - {mutex: narrow_corridor}
+    - - 31
+      - 30
+      - {mutex: narrow_corridor}
+    - - 31
+      - 32
+      - {mutex: narrow_corridor}
+    - - 32
+      - 31
+      - {mutex: narrow_corridor}
+    - - 32
+      - 22
+      - {mutex: narrow_corridor}
+    - - 22
+      - 32
+      - {mutex: narrow_corridor}
+    - - 22
+      - 33
+      - {mutex: narrow_corridor}
+    - - 33
+      - 22
+      - {mutex: narrow_corridor}
+    - - 33
+      - 34
+      - {mutex: narrow_corridor}
+    - - 34
+      - 33
+      - {mutex: narrow_corridor}
+    - - 34
+      - 35
+      - {mutex: narrow_corridor}
+    - - 35
+      - 34
+      - {mutex: narrow_corridor}
+    - - 35
+      - 36
+      - {mutex: narrow_corridor}
+    - - 36
+      - 35
+      - {mutex: narrow_corridor}
+    - - 36
+      - 37
+      - {mutex: narrow_corridor}
+    - - 37
+      - 36
+      - {mutex: narrow_corridor}
+    - - 37
+      - 38
+      - {mutex: narrow_corridor}
+    - - 38
+      - 37
+      - {mutex: narrow_corridor}
+    - - 38
+      - 39
+      - {mutex: narrow_corridor}
+    - - 39
+      - 38
+      - {mutex: narrow_corridor}
+    - - 39
+      - 40
+      - {mutex: narrow_corridor}
+    - - 40
+      - 39
+      - {mutex: narrow_corridor}
+    - - 40
+      - 41
+      - {mutex: narrow_corridor}
+    - - 41
+      - 40
+      - {mutex: narrow_corridor}
+    - - 41
+      - 42
+      - {mutex: narrow_corridor}
+    - - 42
+      - 41
+      - {mutex: narrow_corridor}
+    - - 42
+      - 43
+      - {mutex: narrow_corridor}
+    - - 43
+      - 42
+      - {mutex: narrow_corridor}
+    - - 43
+      - 2
+      - {mutex: narrow_corridor}
+    - - 2
+      - 43
+      - {mutex: narrow_corridor}
+    - - 2
+      - 44
+      - {door_name: door1, mutex: narrow_corridor}
+    - - 44
+      - 2
+      - {door_name: door1, mutex: narrow_corridor}
+    - - 44
+      - 1
+      - {mutex: narrow_corridor}
+    - - 1
+      - 44
+      - {mutex: narrow_corridor}
+    - - 45
+      - 1
+      - {mutex: narrow_corridor}
+    - - 1
+      - 45
+      - {mutex: narrow_corridor}
+    - - 46
+      - 1
+      - {mutex: narrow_corridor}
+    - - 1
+      - 46
+      - {mutex: narrow_corridor}
+    - - 45
+      - 47
+      - {mutex: pickup}
+    - - 47
+      - 45
+      - {mutex: pickup}
+    - - 47
+      - 1
+      - {mutex: pickup}
+    - - 1
+      - 47
+      - {mutex: pickup}
+    - - 46
+      - 47
+      - {mutex: pickup}
+    - - 47
+      - 46
+      - {mutex: pickup}
+    - - 28
+      - 47
+      - {mutex: pickup}
+    - - 47
+      - 28
+      - {mutex: pickup}
+    - - 0
+      - 47
+      - {mutex: pickup}
+    - - 47
+      - 0
+      - {mutex: pickup}
+    vertices:
+    - - 72.5535165498354
+      - -31.082196741098457
+      - {is_charger: true, name: charger_1}
+    - - 80.10676384568984
+      - -31.082196741098457
+      - {mutex: narrow_corridor, name: charging_bay}
+    - - 80.10676384568984
+      - -17.792270553827635
+      - {mutex: narrow_corridor, name: after_door}
+    - - 83.16809804558771
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_802}
+    - - 86.52007799080846
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_801}
+    - - 77.92152639153264
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_803}
+    - - 74.53591291026436
+      - -17.792270553827635
+      - {mutex: narrow_corridor, name: room_804}
+    - - 69.15480711201913
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_805}
+    - - 65.78040480943335
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, name: room_806}
+    - - 60.488988440648235
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_807}
+    - - 57.024896708602355
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_808}
+    - - 51.789536233229796
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_809}
+    - - 48.37028921591397
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_810}
+    - - 43.123717561858896
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_811}
+    - - 39.7268929019081
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_812}
+    - - 34.43547653312298
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_813}
+    - - 31.01622951580715
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_814}
+    - - 25.668757253609463
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_815}
+    - - 22.339199665753743
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_816}
+    - - 17.07020565433364
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_817}
+    - - 13.617357597140375
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_818}
+    - - 9.379727032171235
+      - -17.792270553827635
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_819}
+    - - 15.40266468594777
+      - -17.792270553827635
+      - {name: ''}
+    - - 14.794466366463991
+      - -21.592665150178785
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_820}
+    - - 14.794466366463991
+      - -26.828058121721444
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_821}
+    - - 14.794466366463991
+      - -30.135193352212145
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_822}
+    - - 14.794466366463991
+      - -35.572355043869926
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_823}
+    - - 14.794466366463991
+      - -38.89070145304314
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_824}
+    - - 88.14517896105126
+      - -31.082196741098457
+      - {is_charger: true, name: charger_3}
+    - - 15.881885706327513
+      - -38.89070145304314
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_825}
+    - - 15.881885706327513
+      - -35.5499326865049
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_826}
+    - - 15.881885706327513
+      - -30.146404530894657
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_827}
+    - - 15.881885706327513
+      - -27.48948516781958
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_828}
+    - - 25.72481314702203
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_829}
+    - - 31.04986305185469
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_830}
+    - - 34.5475883199481
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_831}
+    - - 39.749315259273125
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_832}
+    - - 43.20219581263648
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_833}
+    - - 48.34786685854894
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_834}
+    - - 51.80074741191231
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_835}
+    - - 57.06974142333241
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_836}
+    - - 60.60110022747335
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_837}
+    - - 65.80282716679838
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_838}
+    - - 69.17722946938416
+      - -18.605129752564928
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_839}
+    - - 80.10484657165426
+      - -21.191564922705595
+      - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: before_door}
+    - - 72.5535165498354
+      - -34.62928369156502
+      - {is_charger: true, name: charger_2}
+    - - 88.14517896105126
+      - -34.62925119539493
+      - {is_charger: true, name: charger_4}
+    - - 80.10676384568984
+      - -34.62928369156502
+      - {mutex: pickup, name: cargo_pickup, pickup_dispenser: invisibot_dispenser}
+lifts: {}
