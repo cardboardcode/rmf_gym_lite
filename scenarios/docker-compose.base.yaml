@@ -37,7 +37,7 @@ services:
      restart: unless-stopped
    fleet_adapter_invisibot:
      container_name: fleet_adapter_invisibot_c
-     image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy_delivery
+     image: ghcr.io/cardboardcode/fleet_adapter_invisibot:jazzy
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
        RCUTILS_COLORIZED_OUTPUT: 1
