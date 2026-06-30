@@ -35,13 +35,16 @@ bash scripts/2_deploy_docker_compose.bash
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_lift.png)
 
 ### **simple_doors**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_doors.png)
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_doors.gif)
 
 ### **delivery_queue**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_queue.png)
 
 ### **lift_queue**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/lift_queue.png)
+
+### **narrow_corridor**
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/narrow_corridor.png)
 
 
 ## **Maintainer(s)**
