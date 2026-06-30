@@ -7,7 +7,7 @@ These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tr
 > [!TIP]
 > `rmf_gym_lite` is best used in order to help identify potential deadlocks in your RMF Map Building `.yaml` file and allow ease of finetuning based on [recommended graph strategies](https://osrf.github.io/ros2multirobotbook/integration_nav-maps-strategies.html).
 
-## **Build**
+## **Build** :hammer:
 
 ```bash
 git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-branch main
@@ -17,7 +17,7 @@ git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-b
 bash scripts/1_pull_docker_compose.bash
 ```
 
-## **Run**
+## **Run** :rocket:
 
 ```bash
 bash scripts/2_deploy_docker_compose.bash
