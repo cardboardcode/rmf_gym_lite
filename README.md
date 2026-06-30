@@ -1,30 +1,3 @@
-## **What Is This?**
-
-This is a collection of **lightweight simulated RMF deployments** you can run locally on your workstation to test RMF task workflows and deconflictions.
-
-These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tree/devel/gary) and [fleet_adapter_invisibot](https://github.com/cardboardcode/fleet_adapter_invisibot) in order to skip setting up a physical robot as well as avoid using computationally-heavy Gazebo simulations.
-
-## **Build**
-
-```bash
-git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-branch main
-```
-
-```bash
-docker compose -f examples/simple_lift/docker-compose.yaml build
-```
-
-## **Run**
-
-```bash
-bash scripts/1_run_triple_h_scenario.bash
-```
-
-## **Verify**
-
-```bash
-
-```
-
-## **Maintainer(s)**
-- [cardboardcode](https://github.com/cardboardcode)
+> [!WARNING]
+> Hi there, this branch only stores image and animation files used for visualising the codebase.
+> Please hop on over to [main](https://github.com/cardboardcode/rmf_gym_lite/tree/main) branch instead.
