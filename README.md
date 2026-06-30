@@ -31,9 +31,6 @@ bash scripts/2_deploy_docker_compose.bash
 ### **triple_H**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.png)
 
-### **simple_deconfliction**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_deconfliction.png)
-
 ### **simple_lift**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_lift.png)
 
