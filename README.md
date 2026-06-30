@@ -21,8 +21,16 @@ bash scripts/1_pull_docker_compose.bash
 
 ## **Run** :rocket:
 
+Start without `RViz`:
+
 ```bash
 bash scripts/2_deploy_docker_compose.bash
+```
+
+Start with `RViz2`
+
+```bash
+bash scripts/2_deploy_docker_compose.bash -y
 ```
 
 > To stop the deployment, run the command below:
