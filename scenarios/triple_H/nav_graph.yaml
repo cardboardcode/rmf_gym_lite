@@ -93,23 +93,14 @@ levels:
     - - 1
       - 16
       - {is_bidirectional: false, mutex: h1}
-    - - 16
-      - 0
-      - {is_bidirectional: false, mutex: h1}
     - - 15
       - 17
-      - {is_bidirectional: false, mutex: h4}
-    - - 17
-      - 18
       - {is_bidirectional: false, mutex: h4}
     - - 18
       - 15
       - {is_bidirectional: false}
     - - 3
       - 19
-      - {is_bidirectional: false, mutex: h2}
-    - - 19
-      - 20
       - {is_bidirectional: false, mutex: h2}
     - - 20
       - 3
@@ -119,9 +110,6 @@ levels:
       - {is_bidirectional: false}
     - - 14
       - 22
-      - {is_bidirectional: false, mutex: h3}
-    - - 22
-      - 21
       - {is_bidirectional: false, mutex: h3}
     - - 23
       - 10
@@ -138,123 +126,183 @@ levels:
     - - 11
       - 27
       - {is_bidirectional: false, mutex: h7}
-    - - 27
-      - 26
-      - {is_bidirectional: false, mutex: h7}
     - - 13
       - 28
-      - {is_bidirectional: false, mutex: h9}
-    - - 28
-      - 25
       - {is_bidirectional: false, mutex: h9}
     - - 10
       - 29
       - {is_bidirectional: false, mutex: h6}
-    - - 29
-      - 23
-      - {is_bidirectional: false, mutex: h6}
     - - 12
       - 30
       - {is_bidirectional: false, mutex: h8}
+    - - 27
+      - 31
+      - {is_bidirectional: false, mutex: h7}
+    - - 31
+      - 26
+      - {is_bidirectional: false}
     - - 30
-      - 24
+      - 32
       - {is_bidirectional: false, mutex: h8}
+    - - 32
+      - 24
+      - {is_bidirectional: false}
+    - - 29
+      - 33
+      - {is_bidirectional: false, mutex: h6}
+    - - 33
+      - 23
+      - {is_bidirectional: false}
+    - - 28
+      - 34
+      - {is_bidirectional: false, mutex: h9}
+    - - 34
+      - 25
+      - {is_bidirectional: false}
+    - - 16
+      - 35
+      - {is_bidirectional: false, mutex: h1}
+    - - 35
+      - 0
+      - {is_bidirectional: false}
+    - - 19
+      - 36
+      - {is_bidirectional: false, mutex: h2}
+    - - 36
+      - 20
+      - {is_bidirectional: false}
+    - - 17
+      - 37
+      - {is_bidirectional: false, mutex: h4}
+    - - 37
+      - 18
+      - {is_bidirectional: false}
+    - - 22
+      - 38
+      - {is_bidirectional: false, mutex: h3}
+    - - 38
+      - 21
+      - {is_bidirectional: false}
     vertices:
-    - - 2.047875625810603
-      - -1.7817330593610106
-      - {is_parking_spot: true, mutex: 1, name: TopLeft}
-    - - 2.047875625810603
-      - -4.823911306890776
+    - - 4.095751251621206
+      - -3.563466118722021
+      - {is_charger: true, is_parking_spot: true, mutex: 1, name: TopLeft}
+    - - 4.095751251621206
+      - -9.647822613781551
       - {mutex: 5, name: ''}
-    - - 2.048714774294264
-      - -7.090230532711283
+    - - 4.097429548588528
+      - -14.180461065422566
       - {mutex: 5, name: ''}
-    - - 2.0473898030042728
-      - -9.36750285452905
+    - - 4.0947796060085455
+      - -18.7350057090581
       - {mutex: 5, name: ''}
-    - - 4.7004681483732496
-      - -7.0888172300019585
+    - - 9.400936296746499
+      - -14.177634460003917
       - {mutex: 5, name: ''}
-    - - 7.350366562646247
-      - -7.0883314071956285
+    - - 14.700733125292494
+      - -14.176662814391257
       - {mutex: 5, name: ''}
-    - - 10.000618302596576
-      - -7.087978081518297
+    - - 20.001236605193153
+      - -14.175956163036593
       - {mutex: 5, name: ''}
-    - - 12.653210825159224
-      - -7.082148207842336
+    - - 25.30642165031845
+      - -14.164296415684673
       - {mutex: 5, name: ''}
-    - - 15.308806615979185
-      - -7.083296516293661
+    - - 30.61761323195837
+      - -14.166593032587322
       - {name: ''}
-    - - 17.963386595476816
-      - -7.07843828823036
+    - - 35.92677319095363
+      - -14.15687657646072
       - {mutex: 5, name: ''}
-    - - 7.353855653709891
-      - -4.830138671953735
+    - - 14.707711307419782
+      - -9.66027734390747
       - {mutex: 5, name: ''}
-    - - 7.35107321400091
-      - -9.35668225566079
+    - - 14.70214642800182
+      - -18.71336451132158
       - {mutex: 5, name: ''}
-    - - 12.654844956416879
-      - -4.8098224455072005
+    - - 25.309689912833758
+      - -9.619644891014401
       - {mutex: 5, name: ''}
-    - - 12.652062516707899
-      - -9.354606467306468
+    - - 25.304125033415797
+      - -18.709212934612935
       - {mutex: 5, name: ''}
-    - - 17.963916583992813
-      - -4.81861142173081
+    - - 35.927833167985625
+      - -9.63722284346162
       - {mutex: 5, name: ''}
-    - - 17.960869150025836
-      - -9.358934706853773
+    - - 35.92173830005167
+      - -18.717869413707547
       - {mutex: 5, name: ''}
-    - - 1.3362335459562584
-      - -3.219856897517602
+    - - 2.4958042532470057
+      - -6.439713795035204
       - {mutex: h1, name: ''}
-    - - 18.6594823455286
-      - -10.759915183180942
+    - - 37.58395894905546
+      - -21.519830366361884
       - {mutex: h4, name: ''}
-    - - 17.961840795638494
-      - -12.384197487581316
-      - {is_parking_spot: true, mutex: 4, name: BottomRight}
-    - - 1.381194238396631
-      - -10.785884620464772
-      - {name: h2}
-    - - 2.0466831516496105
-      - -12.392456475288927
-      - {is_parking_spot: true, mutex: 2, name: BottomLeft}
-    - - 17.962812441251153
-      - -1.786812115972644
-      - {is_parking_spot: true, mutex: 3, name: TopRight}
-    - - 18.614035830281892
-      - -3.1732620738195743
+    - - 35.92368159127699
+      - -24.768394975162632
+      - {is_charger: true, is_parking_spot: true, mutex: 4, name: BottomRight}
+    - - 2.4575567486759224
+      - -21.582104016991476
+      - {mutex: h2, name: ''}
+    - - 4.093366303299221
+      - -24.784912950577855
+      - {is_charger: true, is_parking_spot: true, mutex: 2, name: BottomLeft}
+    - - 35.925624882502305
+      - -3.573624231945288
+      - {is_charger: true, is_parking_spot: true, mutex: 3, name: TopRight}
+    - - 37.58519558892612
+      - -6.3661337227310195
       - {mutex: h3, name: ''}
-    - - 7.353899819419558
-      - -1.7822188821673408
+    - - 14.707799638839116
+      - -3.5644377643346816
       - {is_charger: true, is_parking_spot: true, mutex: 6, name: TopCenterLeft, spawn_robot_name: tinyRobotTopLeft,
         spawn_robot_type: Open-RMF/TinyRobot}
-    - - 12.654800790707212
-      - -1.7776256483620376
+    - - 25.309601581414423
+      - -3.5552512967240752
       - {is_charger: true, is_parking_spot: true, mutex: 8, name: TopCenterRight,
         spawn_robot_name: tinyRobotTopRight, spawn_robot_type: Open-RMF/TinyRobot}
-    - - 12.652680836643228
-      - -12.385831618838973
+    - - 25.305361673286455
+      - -24.771663237677945
       - {is_charger: true, is_parking_spot: true, mutex: 9, name: BottomCenterRight,
         spawn_robot_name: tinyRobotBottomRight, spawn_robot_type: Open-RMF/TinyRobot}
-    - - 7.35045489406558
-      - -12.405794519608175
+    - - 14.70090978813116
+      - -24.81158903921635
       - {is_charger: true, is_parking_spot: true, mutex: 7, name: BottomCenterLeft,
         spawn_robot_name: tinyRobotBottomLeft, spawn_robot_type: Open-RMF/TinyRobot}
-    - - 6.6097076115410935
-      - -10.952786837294013
+    - - 13.219415223082187
+      - -21.905573674588027
       - {mutex: h7, name: ''}
-    - - 13.403056243874984
-      - -10.92845153126784
+    - - 26.806112487749967
+      - -21.85690306253568
       - {mutex: h9, name: ''}
-    - - 6.5671760331323705
-      - -3.217913606292282
+    - - 13.134352066264741
+      - -6.435827212584564
       - {name: h6}
-    - - 13.443732862477717
-      - -3.2382739984484816
+    - - 26.887465724955433
+      - -6.476547996896963
       - {mutex: h8, name: ''}
+    - - 13.219415223082187
+      - -24.81158903921635
+      - {mutex: h7, name: ''}
+    - - 26.887465724955433
+      - -3.5552512967240752
+      - {mutex: h8, name: ''}
+    - - 13.134352066264741
+      - -3.5644377643346816
+      - {mutex: h6, name: ''}
+    - - 26.806112487749967
+      - -24.771663237677945
+      - {mutex: h9, name: ''}
+    - - 2.4958042532470057
+      - -3.549156428790115
+      - {mutex: h1, name: ''}
+    - - 2.4575567486759224
+      - -24.784912950577855
+      - {mutex: h2, name: ''}
+    - - 37.58395894905546
+      - -24.768394975162632
+      - {mutex: h4, name: ''}
+    - - 37.58519558892612
+      - -3.573624231945288
+      - {mutex: h3, name: ''}
 lifts: {}

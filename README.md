@@ -40,22 +40,22 @@ bash scripts/2_deploy_docker_compose.bash -y
 ## **Scenario(s)**
 
 ### **triple_H**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.png)
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/triple_h.gif)
 
 ### **simple_lift**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_lift.png)
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_lift.gif)
 
 ### **simple_doors**
 ![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_doors.gif)
 
 ### **delivery_queue**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/simple_queue.png)
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/delivery_queue.gif)
 
 ### **lift_queue**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/lift_queue.png)
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/lift_queue.gif)
 
 ### **narrow_corridor**
-![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/narrow_corridor.png)
+![](https://raw.githubusercontent.com/cardboardcode/rmf_gym_lite/media/assets/narrow_corridor.gif)
 
 
 ## **Maintainer(s)**
