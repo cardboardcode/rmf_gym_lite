@@ -20,6 +20,31 @@ git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-b
 bash scripts/1_pull_docker_compose.bash
 ```
 
+## **Configure** :wrench:
+
+**Follow** the instructions below to create a custom scenario:
+
+1. **Create** a new directory and call it your designated new scenario name.
+
+2. **Copy** over the following files from other scenarios:
+
+> - `debug.rviz`
+> - `docker-compose.override.yaml`
+
+3. **Create** the following new RMF Building Map File:
+
+> - Image file used for layout.
+> - `.building.yaml`
+
+> [!INFO]
+> Each charger spawns an invisibot. Set `is_charger` property to `true` for waypoints you wish for the robots to start on.
+
+4. **Generate** `nav_graph.yaml` for the new RMF Building Map File using the following command below:
+
+```bash
+bash scripts/traffic_editor/2_generate_nav_graph.bash
+```
+
 ## **Run** :rocket:
 
 **Start** without `RViz`:

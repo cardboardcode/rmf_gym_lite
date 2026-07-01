@@ -395,7 +395,7 @@ levels:
       - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_819}
     - - 15.40266468594777
       - -17.792270553827635
-      - {name: ''}
+      - {mutex: narrow_corridor, name: ''}
     - - 14.794466366463991
       - -21.592665150178785
       - {dropoff_ingestor: invisibot_ingestor, mutex: narrow_corridor, name: room_820}

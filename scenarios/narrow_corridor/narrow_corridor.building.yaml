@@ -123,7 +123,7 @@ levels:
       - [525.29899999999998, 547.51900000000001, 0, room_817, {dropoff_ingestor: [1, invisibot_ingestor], mutex: [1, narrow_corridor]}]
       - [419.04500000000002, 547.51900000000001, 0, room_818, {dropoff_ingestor: [1, invisibot_ingestor], mutex: [1, narrow_corridor]}]
       - [288.64100000000002, 547.51900000000001, 0, room_819, {dropoff_ingestor: [1, invisibot_ingestor], mutex: [1, narrow_corridor]}]
-      - [473.98399999999998, 547.51900000000001, 0, ""]
+      - [473.98399999999998, 547.51900000000001, 0, "", {mutex: [1, narrow_corridor]}]
       - [455.26799999999997, 664.46799999999996, 0, room_820, {dropoff_ingestor: [1, invisibot_ingestor], mutex: [1, narrow_corridor]}]
       - [455.26799999999997, 825.57600000000002, 0, room_821, {dropoff_ingestor: [1, invisibot_ingestor], mutex: [1, narrow_corridor]}]
       - [455.26799999999997, 927.346, 0, room_822, {dropoff_ingestor: [1, invisibot_ingestor], mutex: [1, narrow_corridor]}]
