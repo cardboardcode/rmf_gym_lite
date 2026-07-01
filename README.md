@@ -36,7 +36,7 @@ bash scripts/1_pull_docker_compose.bash
 > - Image file used for layout.
 > - `.building.yaml`
 
-> [!INFO]
+> [!TIP]
 > Each charger spawns an invisibot. Set `is_charger` property to `true` for waypoints you wish for the robots to start on.
 
 4. **Generate** `nav_graph.yaml` for the new RMF Building Map File using the following command below:
