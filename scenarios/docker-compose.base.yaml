@@ -22,9 +22,9 @@ services:
      environment:
       XDG_RUNTIME_DIR: $XDG_RUNTIME_DIR
       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
-      DISPLAY: $DISPLAY
       RCUTILS_COLORIZED_OUTPUT: 1
      network_mode: "host"
+     userns_mode: "keep-id" # Crucial for matching user IDs with the host network
      healthcheck: 
       test: "bash /rmf_core_ws/check_health.bash"
       interval: 30s
@@ -47,6 +47,7 @@ services:
      container_name: invisibot_c
      image: ghcr.io/cardboardcode/invisibot:latest
      network_mode: "host"
+     userns_mode: "keep-id" # Crucial for matching user IDs with the host network
      command: bash -c "python3 -m invisibot"
    door_adapter_mock:
      container_name: door_adapter_mock_c

@@ -77,22 +77,32 @@ cleanup() {
     echo -e "🧹 Cleaning up containers..."
     
     # 1. Standard Compose cleanup
-    podman compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes || true
+    # Removed "|| true" so we can check if it actually succeeded
+    if ! podman compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes; then
+        echo "⚠️ Podman compose down failed. Attempting fallback cleanup..."
+    fi
     
-    # 2. Force remove specific problematic names (The "Nuclear" option for fixed names)
-    # This ensures that even if Compose doesn't 'own' them, they are gone.
-    podman rm -f \
-    rmf_web_api_server_c \
-    rmf_web_dashboard_c \
-    lift_adapter_mock_c \
-    fleet_adapter_invisibot_c \
-    lift_adapter_mock_c \
-    door_adapter_mock_c \
-    invisibot_c \
-    rmf_core_c \
-    2>/dev/null || true
+    # List of specific container names to ensure are removed
+    local target_containers=(
+        "rmf_web_api_server_c"
+        "rmf_web_dashboard_c"
+        "fleet_adapter_invisibot_c"
+        "lift_adapter_mock_c"
+        "door_adapter_mock_c"
+        "invisibot_c"
+        "rmf_core_c"
+    )
+
+    # 2. Dynamic Force Removal (with Sudo Fallback)
+    for container in "${target_containers[@]}"; do
+        # Check if the container exists in the current user's namespace
+        if podman ps -a --format '{{.Names}}' | grep -Eq "^${container}$"; then
+            echo "Removing container: ${container}"
+            podman rm -f "$container" >/dev/null
+        fi
+    done
     
-    echo "Cleanup complete."
+    echo "✨ Cleanup complete."
 }
 
 # 3. Setup Traps
