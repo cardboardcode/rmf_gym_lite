@@ -77,11 +77,11 @@ cleanup() {
     echo -e "🧹 Cleaning up containers..."
     
     # 1. Standard Compose cleanup
-    docker compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes || true
+    podman compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes || true
     
     # 2. Force remove specific problematic names (The "Nuclear" option for fixed names)
     # This ensures that even if Compose doesn't 'own' them, they are gone.
-    docker rm -f \
+    podman rm -f \
     rmf_web_api_server_c \
     rmf_web_dashboard_c \
     lift_adapter_mock_c \
@@ -102,12 +102,10 @@ trap cleanup SIGINT SIGTERM ERR
 echo -e "\U0001f50d Pre-run cleanup..."
 cleanup
 
-xhost +local:docker
-
-# 5. Run docker compose up
-echo -e "\U0001f680 Starting docker compose..."
+# 5. Run podman compose up
+echo -e "\U0001f680 Starting podman compose..."
 # Apply the project name here as well
-docker compose -p "${PROJECT_NAME,,}" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" up -d
+podman compose -p "${PROJECT_NAME,,}" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" up -d
 
 echo "-------------------------------------------------------"
 echo "Done! Project '$PROJECT_NAME' is running."

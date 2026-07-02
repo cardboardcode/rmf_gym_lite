@@ -57,7 +57,7 @@ fi
 # Construct the .building.yaml file path
 building_yaml_file="$selected_subdir/$selected_subdir.building.yaml"
 
-docker run -it --rm \
+podman run -it --rm \
   --name nav_graph_generator_c \
   --network=host \
   --ipc=host \

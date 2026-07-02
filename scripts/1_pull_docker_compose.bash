@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker compose -f scenarios/docker-compose.base.yaml pull
+podman compose -f scenarios/docker-compose.base.yaml pull

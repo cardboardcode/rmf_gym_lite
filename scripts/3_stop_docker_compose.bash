@@ -10,11 +10,11 @@ cleanup() {
     echo -e "🧹 Cleaning up containers for project ..."
     
     # 1. Standard Compose cleanup
-    docker compose -f "$COMPOSE_FILE" down --remove-orphans --volumes || true
+    podman compose -f "$COMPOSE_FILE" down --remove-orphans --volumes || true
     
     # 2. Force remove specific problematic names (The "Nuclear" option for fixed names)
     # This ensures that even if Compose doesn't 'own' them, they are gone.
-    docker rm -f \
+    podman rm -f \
     rmf_web_dashboard_c \
     rmf_web_api_server_c \
     lift_adapter_mock_c \

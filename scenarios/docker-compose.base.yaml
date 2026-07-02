@@ -19,15 +19,11 @@ services:
    rmf_core:
      container_name: rmf_core_c
      image: ghcr.io/cardboardcode/rmf_core:jazzy
-     volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
      environment:
       XDG_RUNTIME_DIR: $XDG_RUNTIME_DIR
       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
       DISPLAY: $DISPLAY
       RCUTILS_COLORIZED_OUTPUT: 1
-     devices:
-      - "/dev/dri:/dev/dri"
      network_mode: "host"
      healthcheck: 
       test: "bash /rmf_core_ws/check_health.bash"
