@@ -13,7 +13,7 @@ These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tr
 ## **Build** :hammer:
 
 ```bash
-git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-branch main && cd rmf_gym_lite
+git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-branch && cd rmf_gym_lite
 ```
 
 ```bash
