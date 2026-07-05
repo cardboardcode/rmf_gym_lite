@@ -42,7 +42,7 @@ services:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
        RCUTILS_COLORIZED_OUTPUT: 1
      network_mode: "host"
-     command: bash -c "ros2 launch fleet_adapter_invisibot fleet_adapter.launch.xml config_file:=/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml nav_graph_file:=/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml server_uri:=${WS_URL:-ws://localhost:8000}/_internal use_sim_time:=false enable_workcell:=true"
+     command: bash -c "ros2 launch fleet_adapter_invisibot fleet_adapter.launch.py config_file:=/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml nav_graph_file:=/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml server_uri:=${WS_URL:-ws://localhost:8000}/_internal use_sim_time:=false enable_workcell:=true"
      depends_on:
       rmf_core:
         condition: service_healthy
