@@ -23,6 +23,7 @@ cleanup() {
     door_adapter_mock_c \
     invisibot_c \
     rmf_core_c \
+    traffic_light_adapter_invisibot_c \
     2>/dev/null || true
     
     echo "Cleanup complete."
