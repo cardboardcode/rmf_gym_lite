@@ -9,29 +9,34 @@ services:
         config_file:=/rmf_core_ws/map/simple_traffic_light/simple_traffic_light.building.yaml
         viz_config_file:=/rmf_core_ws/install/rmf_core/rviz/debug.rviz
         headless:=${HEADLESS:-true}"
-  #  fleet_adapter_invisibot:
-  #    volumes:
-  #     - ./fleet_config.base.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
-  #     - ./simple_traffic_light/nav_graph.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
    fleet_adapter_invisibot:
-    scale: 0
+     volumes:
+      - ./fleet_config.base.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/config.yaml
+      - ./simple_traffic_light/nav_graph.yaml:/fleet_adapter_invisibot_ws/src/fleet_adapter_invisibot/nav_graph.yaml
+   invisibot:
+     volumes:
+       - ./robots.base.json:/invisibot_ws/robots.json
    traffic_light_adapter_invisibot:
      container_name: traffic_light_adapter_invisibot_c
-     image: traffic_light_adapter_invisibot:jazzy
+     image: ghcr.io/cardboardcode/traffic_light_adapter_invisibot:jazzy
      environment:
        RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
        RCUTILS_COLORIZED_OUTPUT: 1
      volumes:
-      - ./fleet_config.base.yaml:/config.yaml
+      - ./simple_traffic_light/traffic_light_config.yaml:/config.yaml
      network_mode: "host"
-     command: bash -c "ros2 launch traffic_light_adapter_invisibot fleet_adapter.launch.xml config_file:=/config.yaml server_uri:=${WS_URL:-ws://localhost:8000}/_internal use_sim_time:=false"
+     command: bash -c "ros2 launch traffic_light_adapter_invisibot fleet_adapter.launch.xml config_file:=/config.yaml use_sim_time:=false"
      depends_on:
       rmf_core:
         condition: service_healthy
      restart: unless-stopped
-   invisibot:
+   traffic_light_invisibot:
+     container_name: traffic_light_invisibot_c
+     image: ghcr.io/cardboardcode/invisibot:traffic_light
+     network_mode: "host"
+     command: bash -c "python3 -m invisibot --port 8081"
      volumes:
-       - ./robots.base.json:/invisibot_ws/robots.json
+       - ./simple_traffic_light/traffic_light_robots.json:/invisibot_ws/robots.json
    lift_adapter_mock:
      scale: 0
    door_adapter_mock:

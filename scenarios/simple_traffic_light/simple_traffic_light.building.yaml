@@ -23,11 +23,8 @@ levels:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [7, 4, 5, 6]
     lanes:
-      - [8, 10, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [10, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [11, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [10, 12, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [10, 13, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [8, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [9, 10, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], mutex: [1, ""], orientation: [1, ""], speed_limit: [3, 0]}]
     layers:
       {}
     measurements:
@@ -42,12 +39,9 @@ levels:
       - [3004.6550000000002, 1570.354, 0, ""]
       - [125.203, 1571.9179999999999, 0, ""]
       - [126.74299999999999, 38.206000000000003, 0, ""]
-      - [385.82400000000001, 744.09000000000003, 0, 0_a, {is_charger: [4, true]}]
-      - [2714.5500000000002, 744.09000000000003, 0, 0_b]
-      - [1714.874, 744.09000000000003, 0, ""]
-      - [1991.9449999999999, 744.09000000000003, 0, ""]
-      - [1714.874, 392.26600000000002, 0, 0_c, {is_charger: [4, true]}]
-      - [1714.874, 1098.384, 0, 0_d]
+      - [1135.037, 741.96299999999997, 0, 0_a, {is_charger: [4, true]}]
+      - [1749.058, 741.96299999999997, 0, 0_b]
+      - [1749.058, 445.44400000000002, 0, 0_c]
     walls:
       - [7, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [6, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
