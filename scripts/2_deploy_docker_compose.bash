@@ -91,6 +91,7 @@ cleanup() {
     invisibot_c \
     rmf_core_c \
     traffic_light_adapter_invisibot_c \
+    traffic_light_invisibot_c \
     2>/dev/null || true
     
     echo "Cleanup complete."
