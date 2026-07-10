@@ -21,18 +21,23 @@ services:
      image: ghcr.io/cardboardcode/rmf_core:jazzy
      environment:
       XDG_RUNTIME_DIR: $XDG_RUNTIME_DIR
+      WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
       DISPLAY: ${DISPLAY}
       XAUTHORITY: ${XAUTHORITY}
-      RCUTILS_COLORIZED_OUTPUT: 1
+      # Forces applications to use software CPU rendering instead of a missing GPU
+      LIBGL_ALWAYS_SOFTWARE: "1" 
+      # Redirects logs away from the locked root folder into a globally writeable path
+      ROS_LOG_DIR: /tmp/.ros/log
+      RCUTILS_COLORIZED_OUTPUT: "1"
      network_mode: "host"
-     userns_mode: "keep-id" # Crucial for matching user IDs with the host network
+     userns_mode: "keep-id"
      security_opt:
       - label=disable
      volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
       - ${XAUTHORITY}:${XAUTHORITY}:ro
-      - /dev/dri:/dev/dri
+      - ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}:${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}:ro
      healthcheck: 
       test: "bash /rmf_core_ws/check_health.bash"
       interval: 30s
