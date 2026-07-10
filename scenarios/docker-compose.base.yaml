@@ -22,9 +22,17 @@ services:
      environment:
       XDG_RUNTIME_DIR: $XDG_RUNTIME_DIR
       RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+      DISPLAY: ${DISPLAY}
+      XAUTHORITY: ${XAUTHORITY}
       RCUTILS_COLORIZED_OUTPUT: 1
      network_mode: "host"
      userns_mode: "keep-id" # Crucial for matching user IDs with the host network
+     security_opt:
+      - label=disable
+     volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${XAUTHORITY}:${XAUTHORITY}:ro
+      - /dev/dri:/dev/dri
      healthcheck: 
       test: "bash /rmf_core_ws/check_health.bash"
       interval: 30s
