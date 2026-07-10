@@ -11,8 +11,8 @@ cleanup() {
     
     # 1. Standard Compose cleanup
     # Removed "|| true" so we can check if it actually succeeded
-    if ! podman compose -f "$COMPOSE_FILE" down --remove-orphans --volumes; then
-        echo "⚠️ Podman compose down failed. Attempting fallback cleanup..."
+    if ! docker compose -f "$COMPOSE_FILE" down --remove-orphans --volumes; then
+        echo "⚠️ docker compose down failed. Attempting fallback cleanup..."
     fi
     
     # List of specific container names to ensure are removed
@@ -29,9 +29,9 @@ cleanup() {
     # 2. Dynamic Force Removal (with Sudo Fallback)
     for container in "${target_containers[@]}"; do
         # Check if the container exists in the current user's namespace
-        if podman ps -a --format '{{.Names}}' | grep -Eq "^${container}$"; then
+        if docker ps -a --format '{{.Names}}' | grep -Eq "^${container}$"; then
             echo "Removing container: ${container}"
-            podman rm -f "$container" >/dev/null
+            docker rm -f "$container" >/dev/null
         fi
     done
     

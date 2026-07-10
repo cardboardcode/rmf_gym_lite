@@ -78,8 +78,8 @@ cleanup() {
     
     # 1. Standard Compose cleanup
     # Removed "|| true" so we can check if it actually succeeded
-    if ! podman compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes; then
-        echo "⚠️ Podman compose down failed. Attempting fallback cleanup..."
+    if ! docker compose -f "$OVERRIDE_FILE" down --remove-orphans --volumes; then
+        echo "⚠️ docker compose down failed. Attempting fallback cleanup..."
     fi
     
     # List of specific container names to ensure are removed
@@ -96,9 +96,9 @@ cleanup() {
     # 2. Dynamic Force Removal (with Sudo Fallback)
     for container in "${target_containers[@]}"; do
         # Check if the container exists in the current user's namespace
-        if podman ps -a --format '{{.Names}}' | grep -Eq "^${container}$"; then
+        if docker ps -a --format '{{.Names}}' | grep -Eq "^${container}$"; then
             echo "Removing container: ${container}"
-            podman rm -f "$container" >/dev/null
+            docker rm -f "$container" >/dev/null
         fi
     done
     
@@ -112,10 +112,10 @@ trap cleanup SIGINT SIGTERM ERR
 echo -e "\U0001f50d Pre-run cleanup..."
 cleanup
 
-# 5. Run podman compose up
-echo -e "\U0001f680 Starting podman compose..."
+# 5. Run docker compose up
+echo -e "\U0001f680 Starting docker compose..."
 # Apply the project name here as well
-podman compose -p "${PROJECT_NAME,,}" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" up -d
+docker compose -p "${PROJECT_NAME,,}" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" up -d
 
 echo "-------------------------------------------------------"
 echo "Done! Project '$PROJECT_NAME' is running."
