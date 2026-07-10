@@ -12,6 +12,17 @@ These deployments uses [invisibot](https://github.com/cardboardcode/invisibot/tr
 
 ## **Build** :hammer:
 
+> [!WARN]
+> This branch preserves the docker command syntax while using podman.
+
+```bash
+sudo apt-get update && sudo apt-get install --no-install-recommend podman -y
+```
+
+```bash
+sudo apt-get update && sudo apt-get install --no-install-recommend podman-docker -y
+```
+
 ```bash
 git clone https://github.com/cardboardcode/rmf_gym_lite.git --depth 1 --single-branch main && cd rmf_gym_lite
 ```
